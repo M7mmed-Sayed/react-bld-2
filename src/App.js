@@ -43,7 +43,7 @@ function App() {
 
     let element = useRoutes([
         {
-            path: '/udemy-clone-react/',
+            path: '/react-bld-2/',
             element: (
                 <>
                     <NavScrollExample searchFunction={searchItems} />
@@ -57,7 +57,7 @@ function App() {
             ),
         },
         {
-            path: `/udemy-clone-react/course/:id`,
+            path: `/react-bld-2/course/:id`,
             element: (
                 <>
                     <NavScrollExample searchFunction={searchItems} />

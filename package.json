@@ -1,7 +1,7 @@
 {
     "name": "app",
     "version": "0.1.0",
-    "homepage": "https://m7mmed-sayed.github.io/udemy-clone-react",
+    "homepage": "https://m7mmed-sayed.github.io/react-bld-2",
     "private": true,
     "dependencies": {
         "@testing-library/jest-dom": "^5.16.5",
