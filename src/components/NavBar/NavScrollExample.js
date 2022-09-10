@@ -32,11 +32,10 @@ function NavScrollExample(props) {
                       </Nav.Link>
                       <Form className="d-flex flex-md-grow-1">
                           <Button
-                              type="submit"
+                              type="button"
                               variant="outline-succes"
                               className="searchBtn"
                               onClick={(e) => {
-                                  console.log('object :>> ', searchQuery)
                                   e.preventDefault()
                                   props.searchFunction(searchQuery)
                               }}

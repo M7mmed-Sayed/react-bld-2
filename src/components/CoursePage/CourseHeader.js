@@ -22,20 +22,20 @@ function CourseHeader(props) {
             setCourse(props.data)
         }
     }, [props.data])
-    return isLoading ? (
-        <div>looodaing----</div>
-    ) : (
+    return (
         <div className="Header">
-        <div className="header-content">
-        <div className="course-path">
-            <Link to={'/'}>Development</Link>
-            {'  >  '}
-            <Link to={'/'}>Programming Languages</Link>
-            {' > '}
-            <Link to={'/'}>Python</Link>
-        </div>
+            <div className="header-content">
+                <div className="course-path">
+                    <Link to={'/'}>Development</Link>
+                    {'  >  '}
+                    <Link to={'/'}>Programming Languages</Link>
+                    {' > '}
+                    <Link to={'/'}>Python</Link>
+                </div>
                 <div>
-                    <h2>{course.title}</h2>
+                    <h2>
+                        {' Learn A-Z everything about Python, from the basics'}
+                    </h2>
                 </div>
                 <div>
                     <h6>
@@ -74,7 +74,7 @@ function CourseHeader(props) {
                     </div>
                 </div>
             </div>
-            <CourseHeaderMobileMode/>
+            <CourseHeaderMobileMode />
         </div>
     )
 }

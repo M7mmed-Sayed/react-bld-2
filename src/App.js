@@ -18,59 +18,12 @@ import {
 } from 'react-router-dom'
 import Footer from './components/Footer'
 import SideCard from './components/CoursePage/SideCard'
+import { useMemo } from 'react'
+import RoutesPage from './Hooks/RoutesPages'
 const CourseData =
     'https://my-json-server.typicode.com/M7mmed-Sayed/myjsondata/python-courses'
 function App() {
-    const [searchInput, setSearchInput] = useState('')
-    const [filteredResults, setFilteredResults] = useState([])
-    const { data, isLoading, hasError } = useFetch(CourseData)
-    const inputEl = useRef('')
-    // use call back
-    const searchItems = (searchValue) => {
-        setSearchInput(searchValue)
-        if (searchValue !== '') {
-            const filteredData = data.filter((item) => {
-                return Object.values(item.title)
-                    .join('')
-                    .toLowerCase()
-                    .includes(searchValue.toLowerCase())
-            })
-            setFilteredResults(filteredData)
-        } else {
-            setFilteredResults(data)
-        }
-    }
-
-    let element = useRoutes([
-        {
-            path: '/react-bld-2/',
-            element: (
-                <>
-                    <NavScrollExample searchFunction={searchItems} />
-                    <HomePage
-                        isLoading={isLoading}
-                        hasError={hasError}
-                        data={searchInput.length !== 0 ? filteredResults : data}
-                    />
-                    <Footer />
-                </>
-            ),
-        },
-        {
-            path: `/react-bld-2/course/:id`,
-            element: (
-                <>
-                    <NavScrollExample searchFunction={searchItems} />
-
-                    <CoursePage course={data[0]} />
-                    <Footer />
-                </>
-            ),
-        },
-        { path: '*', element: <div>lol</div> },
-    ])
-    return element
-    
+    return <RoutesPage/>
 }
 
 export default App

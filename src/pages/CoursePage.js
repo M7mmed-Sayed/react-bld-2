@@ -11,6 +11,9 @@ import ReviewList from "../components/CoursePage/ReviewList";
 import WhatYouWillLearn from "../components/CoursePage/WhatYouWillLearn";
 import "../Css/CoursePage/CoursePage.css";
 import SideCard from "../components/CoursePage/SideCard";
+import Footer from "../components/Footer";
+import NavScrollExample from "../components/NavBar/NavScrollExample";
+import HomePage from "./HomePage";
 
 let courseObject;
 
@@ -22,27 +25,31 @@ fetch(`http://localhost:3009/data?id=8324`)
   });
 function CoursePage(props) {
   return (
-    <>
-      <div className="course-page-main-content">
-         <SideCard />
-        <CourseHeader data={props.course} />
-        <div className="centre-body">
-          <WhatYouWillLearn />
-          <CourseContent data={courseObject?.curriculum_context?.data} />
-          <CourseRequirements
-            requirements={courseObject?.details?.Requirements}
-          />
-          <CourseDescription
-            description={courseObject?.details?.description}
-            forWho={courseObject?.details?.for_who}
-          />
-          <InstructorList />
-          <StudentReview />
-          <ReviewList />
-        </div>
-      </div>
-    </>
-  );
+      <>
+          <NavScrollExample searchFunction={HomePage.SearchItems} />
+          <div className="course-page-main-content">
+              <SideCard />
+              <CourseHeader data={props.course} />
+              <div className="centre-body">
+                  <WhatYouWillLearn />
+                  <CourseContent
+                      data={courseObject?.curriculum_context?.data}
+                  />
+                  <CourseRequirements
+                      requirements={courseObject?.details?.Requirements}
+                  />
+                  <CourseDescription
+                      description={courseObject?.details?.description}
+                      forWho={courseObject?.details?.for_who}
+                  />
+                  <InstructorList />
+                  <StudentReview />
+                  <ReviewList />
+              </div>
+          </div>
+          <Footer />
+      </>
+  )
 }
 
 export default CoursePage;
