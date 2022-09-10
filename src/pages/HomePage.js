@@ -8,15 +8,22 @@ import NavScrollExample from '../components/NavBar/NavScrollExample'
 import { useMemo } from 'react'
 import { useState } from 'react'
 import Loader from '../components/Common/Loader'
+import { useSearchParams } from 'react-router-dom'
+import { useEffect } from 'react'
 const CourseData =
     'https://my-json-server.typicode.com/M7mmed-Sayed/myjsondata/python-courses'
 function HomePage(props) {
-    const [searchInput, setSearchInput] = useState('')
+    let [searchParams, setSearchParams] = useSearchParams()
+    let [query, setQuery] = useState(searchParams.get('query'))
     const [filteredResults, setFilteredResults] = useState([])
     const { data, isLoading, hasError } = useFetch(CourseData)
     // use call back
+    useEffect(() => {
+        setQuery(searchParams.get('query'))
+        SearchItems(query)
+    }, [searchParams, isLoading,query])
     const SearchItems = (searchValue) => {
-        setSearchInput(searchValue)
+        console.log('lol ' + searchValue)
         if (searchValue !== '') {
             const filteredData = data.filter((item) => {
                 return Object.values(item.title)
@@ -30,13 +37,9 @@ function HomePage(props) {
         }
         return filteredResults
     }
-    // Use Memo
-    const squaredNum = useMemo(() => {
-        return SearchItems(searchInput)
-    }, [searchInput])
     return (
         <>
-            <NavScrollExample searchFunction={SearchItems} />
+            <NavScrollExample searchparam={setSearchParams} />
             {isLoading ? (
                 <Loader />
             ) : (
@@ -46,11 +49,7 @@ function HomePage(props) {
                     <FieldContainer
                         isLoading={isLoading}
                         hasError={hasError}
-                        data={
-                            filteredResults.length === 0
-                                ? data
-                                : filteredResults
-                        }
+                        data={query.length === 0 ? data : filteredResults}
                     ></FieldContainer>
                 </div>
             )}

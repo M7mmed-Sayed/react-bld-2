@@ -5,6 +5,7 @@ import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
+import { createSearchParams } from "react-router-dom";
 import "../../Css/NavBar/NavBar.css";
 
 function NavScrollExample(props) {
@@ -36,8 +37,9 @@ function NavScrollExample(props) {
                               variant="outline-succes"
                               className="searchBtn"
                               onClick={(e) => {
+                                  console.log('object :>> ', searchQuery)
                                   e.preventDefault()
-                                  props.searchFunction(searchQuery)
+                                  props.searchparam(createSearchParams(`query=${searchQuery}`))
                               }}
                           >
                               <i className="fa-solid fa-magnifying-glass"></i>

@@ -14,6 +14,7 @@ import SideCard from "../components/CoursePage/SideCard";
 import Footer from "../components/Footer";
 import NavScrollExample from "../components/NavBar/NavScrollExample";
 import HomePage from "./HomePage";
+import { useSearchParams } from "react-router-dom";
 
 let courseObject;
 
@@ -24,9 +25,10 @@ fetch(`http://localhost:3009/data?id=8324`)
     courseObject = data[0];
   });
 function CoursePage(props) {
+ let [searchParams, setSearchParams] = useSearchParams()
   return (
       <>
-          <NavScrollExample searchFunction={HomePage.SearchItems} />
+          <NavScrollExample searchparam={setSearchParams} />
           <div className="course-page-main-content">
               <SideCard />
               <CourseHeader data={props.course} />
