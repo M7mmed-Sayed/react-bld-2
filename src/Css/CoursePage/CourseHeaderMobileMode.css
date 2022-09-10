@@ -1,0 +1,95 @@
+.hd-mobile-mode {
+    display: flex;
+    width: 800px;
+    max-width: 100%;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.header-mb-container{
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+.btn-danger{
+    background-color: rgb(167, 16, 159);
+    width: 100%;
+}
+.btn-danger:hover{
+    background-color: rgb(167, 80, 159);
+}
+.side-card-links-mb> a {
+    color: white;
+    margin: 20px 10px;
+    font-size: 70%;
+    font-weight: bold;
+
+}
+.side-card-links > a {
+    color: black;
+    margin: 5px;
+    font-size: 0.86em;
+    font-weight: bold;
+}
+.img-mastercover-mb{
+    width: 90%;
+    max-width: 100%;
+    margin-bottom: 30px;
+    transition: 0.3s;
+    background-image: url(https://img-c.udemycdn.com/course/240x135/394676_ce3d_5.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 350px;
+    position: relative;
+    cursor: pointer;
+}
+.header-content {
+    display: none;
+}
+.stickly-card {
+    display: none;
+}
+.centre-body {
+    margin-right: auto;
+    margin: auto;
+    max-width: 100%;
+    margin-left: 370px;
+}
+.course-path {
+    align-content: space-between;
+}
+.time-left{
+    color: brown;
+}
+.Header {
+    padding-top: 0;
+    height: 920px;
+}
+.extra-data-mb{
+    float: left;
+}
+.info-mb{
+    max-width: 100%;
+}
+@media all and (min-width: 1200px) {
+    .hd-mobile-mode {
+        display: none;
+    }
+    .header-content {
+        display: flex;
+    }
+    .centre-body {
+        margin: 0;
+        margin-right: 370px;
+    }
+
+    .stickly-card {
+        display: block;
+    }
+    .Header {
+    padding-top: 0;
+    height: 320px;
+}
+}

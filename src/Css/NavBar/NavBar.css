@@ -1,0 +1,54 @@
+form {
+    color: #555;
+    display: flex;
+    padding: 2px;
+    border: 1px solid currentColor;
+    border-radius: 20px;
+    margin: 7px 0 0px;
+}
+
+.navbarScroll{
+    max-width: 100%;
+    width: 100%;
+}
+form {
+    flex-grow: 1000000;
+}
+.menu {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+}
+.menu  .item {
+  width: auto;
+ display: block;
+ color: black;
+}
+.item:hover{
+    color: blue;
+}
+.lang-icon:hover,.login:hover{
+    background-color: rgb(212, 207, 207);
+}
+input[type='search'] {
+    background: transparent;
+    width: 100%;
+    margin-left: 4px;
+    padding: 7px 8px;
+    font-size: 14px;
+    color: inherit;
+    border: 0px solid transparent;
+    border-radius: inherit;
+    appearance: auto;
+    outline: none;
+    border: none;
+}
+.searchBtn {
+    outline: none;
+    border: black 0px solid;
+    border-style: none; 
+}
+

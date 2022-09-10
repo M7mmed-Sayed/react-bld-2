@@ -1,0 +1,23 @@
+.CourseDescription h2{
+  margin:0 0rem;
+  font-weight: bold;
+}
+.CourseDescription{
+  text-align: start;
+    max-width: 100%;
+  /* width: 50%; */
+  margin: 20px auto;
+}
+.CourseDescription-ul{
+
+}
+
+.CourseDescription-ul > li{
+  margin: 0px 15px;
+}
+
+@media (max-width: 600x) {
+  .CourseDescription {
+    max-width: 100%;
+  }
+}

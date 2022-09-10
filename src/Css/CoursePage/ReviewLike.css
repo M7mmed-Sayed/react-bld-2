@@ -1,0 +1,11 @@
+.like,.dislike{
+ font-size: large;
+  margin: 2px;
+  border: none;
+  background-color: transparent;
+
+}
+.useful-review{
+  width:300px ;
+  max-width: 100%;
+}

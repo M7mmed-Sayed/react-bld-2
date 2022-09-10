@@ -1,0 +1,24 @@
+.whatYouWillLearn>h2 {
+  margin: 0 2rem;
+  font-weight: bold;
+}
+
+.whatYouWillLearn {
+  text-align: start;
+  border: 1px solid #d1d7dc;
+  width: 700px;
+  max-width: 100%;
+  /* width: 50%; */
+  margin: 20px auto;
+}
+
+.whatYouWillLearn-ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.whatYouWillLearn-ul>li {
+  margin: 0px 15px;
+  font-size: .9rem;
+}

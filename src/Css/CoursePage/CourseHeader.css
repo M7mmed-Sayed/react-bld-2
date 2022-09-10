@@ -1,0 +1,73 @@
+.Header {
+    background-color: black;
+    color: antiquewhite;
+    margin: 0px auto;
+    display: flex;
+   width: 100%;
+     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 320px;
+}
+.header-content {
+    display: flex;
+    width: 800px;
+    margin-right: 250px;
+   padding-right: 30px;
+    flex-direction: column;
+    justify-content:flex-start ;
+}
+.stars-list {
+    list-style: none;
+    display: flex;
+    margin-left: 0;
+    padding-left: 0;
+    padding-top: 0;
+}
+.rate-container ,.extra-data{
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+}
+.star-icon {
+    color: rgb(248, 123, 6);
+}
+.rating-value {
+    color: rgb(228, 91, 11);
+    margin-right: 3px;
+}
+.pepole {
+    margin: 5px;
+}
+
+.rating-item{
+margin: 0 5px;
+}
+.students,.rating-pepole{
+    margin-top: 2px;
+}
+.course-path{
+    align-content: space-between;
+}
+h1,h2,h3,h6,h4,h5,p{
+    font-weight: 100;
+}
+.link {
+      text-decoration: none;
+      color: black;
+}
+.language>.fa-globe{
+    color: white;
+}
+.fa-solid{
+    margin-right: 4px;
+}
+.fa-seal-exclamation{
+    background-color: beige;
+    font-size: large;
+    color: black;
+}
+.course-date,.language,.tran{
+    margin: 0 5px;
+}

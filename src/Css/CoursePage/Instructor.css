@@ -1,0 +1,45 @@
+.inst-students,
+.inst-courses,
+.inst-review,
+.inst-rating {
+    flex-direction: row;
+    display: flex;
+    margin: 10px 0px;
+}
+.inst-info-icon {
+    margin: 7px 20px;
+}
+.inst-personal {
+    flex-direction: column;
+    max-width: 100%;
+    display: flex;
+}
+.inst-image > img {
+    border-radius: 100px;
+}
+.inst-image {
+    margin-right: 30px;
+    max-width: 100%;
+}
+.instructor > .description {
+    display: flex;
+    width: 300px;
+    max-width: 100%;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+.instructor {
+    margin: 40px 0px;
+}
+@media all and (min-width: 660px) {
+    .inst-personal {
+        flex-direction: row;
+        display: flex;
+    }
+    .instructor > .description {
+        display: flex;
+        width: 700px;
+        max-width: 100%;
+        flex-wrap: wrap;
+    }
+}

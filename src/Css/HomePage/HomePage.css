@@ -1,0 +1,11 @@
+.home-body {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    display: flex;
+    height: inherit;
+    flex-direction: column;
+}

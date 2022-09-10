@@ -1,0 +1,38 @@
+.accordion-title {
+    /* margin-left: 2rem; */
+}
+
+
+.accordion-button {
+    color: black;
+    font-weight: bold;
+    background-color: #f7f9fa;
+    width: 100%;
+}
+.accordion-button-title{
+    margin-left: 10px;
+    order: 1;
+}.accordion-button::after{
+    margin: 0%;
+}
+.accordion-button-details {
+    order: 2;
+    margin-left: auto;
+    margin-right: 0;
+}
+.accordion-button::after{
+    margin: 0%;
+}
+.accordion-header {
+}
+
+.accordion-body>ul {
+    margin: 0px 10px;
+    padding: 0px;
+}
+
+.accordion-body>ul>li {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 10px;
+}

@@ -1,0 +1,30 @@
+.courseContent {
+    max-width: 100%;
+    margin: 20px auto;
+    text-align: start;
+}
+
+.courseContent>h2 {
+    margin: 0;
+    font-weight: bold;
+}
+
+#courseContentAccordion {}
+
+.courseContentHeader {
+    display: flex;
+    justify-content: space-between;
+}
+
+.expandBtn {
+    border: none;
+    background-color: transparent;
+    color: #5624d0;
+    font-weight: bold;
+}
+
+@media (max-width: 600x) {
+    .courseContent {
+        max-width: 100%;
+    }
+}

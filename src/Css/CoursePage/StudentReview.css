@@ -1,0 +1,66 @@
+.ratingHeading {
+   
+    font-weight: bold;
+}
+.student-container-review{
+    margin: 50px 0px;
+}
+.ratingBox {
+    display: flex;
+    /* grid-template-columns: 1fr 3fr; */
+    justify-content: space-between;
+    width: 700px;
+    max-width: 100%;
+}
+
+.rating {
+    color: #b4690e;
+    font-weight: bold;
+}
+
+.starOrange {
+    color: #b4690e;
+}
+
+.averageRating {
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.starLine {
+    margin: 0px 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.ratingCount {
+    text-decoration: underline;
+    color: blue;
+}
+
+.ratingLineStarBox {
+    width: 80%;
+}
+
+.ratingLine {
+    margin: 5px 5px;
+    height: 8px;
+    width: 60%;
+    background-color: #d1d7dc;
+}
+
+.ratingLineFill {
+    height: 8px;
+    background-color: #6a6f73;
+}
+
+.ratingLineStarContainer {
+    display: flex;
+}
+
+@media (max-width: 600x) {
+    .ratingBox {
+        display: block;
+    }
+}

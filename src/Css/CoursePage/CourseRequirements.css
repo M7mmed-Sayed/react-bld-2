@@ -1,0 +1,24 @@
+.CourseRequirements>h2{
+  margin:0 0rem;
+  font-weight: bold;
+}
+.CourseRequirements{
+  text-align: start;
+  width: 700px; 
+      max-width: 100%;
+
+  margin: 20px auto;
+}
+.CourseRequirements-ul{
+
+}
+
+.CourseRequirements-ul > li{
+  margin: 0px 15px;
+}
+
+@media (max-width: 600x) {
+  .CourseRequirements {
+    max-width: 100%;
+  }
+}

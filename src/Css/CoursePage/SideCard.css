@@ -1,0 +1,110 @@
+/* CSS  */
+
+.img-mastercover {
+    width: 350px;
+    height: 222.34px;
+    margin: 0;
+    padding: 0;
+    border: 2px solid #313131;
+    border-radius: 10px 10px 0 0;
+    position: relative;
+    transition: 0.3s;
+}
+
+.img-mastercover {
+    background-image: url(https://img-c.udemycdn.com/course/240x135/394676_ce3d_5.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 200px;
+    position: relative;
+    cursor: pointer;
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+.item-text {
+    margin: 5px 15px;
+    font-size: 1.1em;
+}
+.side-card-containt {
+    margin: 15px 0px;
+}
+.side-card-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.side-card-links > a {
+    color: black;
+    margin: 5px;
+    font-size: 0.86em;
+    font-weight: bold;
+}
+.card-masterclass {
+    flex: 1 1 350px;
+    width: 350px;
+    float: right;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-text-area {
+    width: 350px;
+    padding: 15px;
+    background-color: white;
+    border: 2px solid #313131;
+    margin-bottom: 75px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 0 10px 10px;
+}
+
+.card-text-area:hover .img-mastercover {
+    opacity: 0.5;
+}
+
+.card-side-price > h2 {
+    float: left;
+}
+.card-side-price > .buy,
+.business {
+    margin: 5px 25px;
+    width: 260px;
+}
+.card-side-price {
+    display: flex;
+    margin: 10px 0px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.cover {
+    background-color: transparent;
+    color: black;
+    width: 100%;
+    margin-top: 30px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.stickly-card {
+    position: sticky;
+    width: 800px;
+    margin-left: 800px;
+    height: 2px;
+    z-index: 10;
+    top: 0;
+}

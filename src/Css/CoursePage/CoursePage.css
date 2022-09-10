@@ -1,0 +1,14 @@
+.course-page-main-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+
+}
+.cover-page {
+    position: relative;
+}
+.centre-body{
+    margin-right: 350px;
+}

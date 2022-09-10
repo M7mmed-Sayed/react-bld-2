@@ -1,0 +1,38 @@
+.student-review{
+    flex-direction: row;
+    display: flex;
+    margin: 30px 0px 10px 10px;
+    float: left;
+    width: 600px;
+    max-width: 80%;
+}
+
+.rev-custom-name{
+    background-color: black;
+    color: white;
+    border-radius: 100%;
+    margin: 10px 10px 10px 10px;
+    height: 60px;
+    width: 60px;
+    padding: 9px;
+}
+.rev-rate-line{
+    flex-direction: row;
+    display: flex;
+}
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  width: 80%;
+  border-top: 2px solid black;
+}
+.rev-desc{
+margin-bottom: 5px;
+max-width: 80%;
+}
+.ev-desc-comment{
+    width: 400px;
+    max-width: 80%;
+
+}
