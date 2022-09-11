@@ -5,7 +5,7 @@ import { useCallback } from 'react'
 
 function useFetch(url) {
     const [data, setData] = useState([])
-    const [isLoading, setIsLoading] = useState(false)
+    const [isLoading, setIsLoading] = useState(true)
     const [hasError, setHasError] = useState(false)
     const fetchData = useCallback(async () => {
         setIsLoading(true)

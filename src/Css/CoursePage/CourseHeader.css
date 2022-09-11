@@ -53,10 +53,7 @@ margin: 0 5px;
 h1,h2,h3,h6,h4,h5,p{
     font-weight: 100;
 }
-.link {
-      text-decoration: none;
-      color: black;
-}
+
 .language>.fa-globe{
     color: white;
 }

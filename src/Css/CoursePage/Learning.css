@@ -1,9 +1,9 @@
-.whatYouWillLearn>h2 {
+.learning-box>h2 {
   margin: 0 2rem;
   font-weight: bold;
 }
 
-.whatYouWillLearn {
+.learning-box {
   text-align: start;
   border: 1px solid #d1d7dc;
   width: 700px;
@@ -12,13 +12,13 @@
   margin: 20px auto;
 }
 
-.whatYouWillLearn-ul {
+.learning-box>.list {
   display: flex;
-  flex-wrap: wrap;
   list-style: none;
+  flex-wrap: wrap;
 }
 
-.whatYouWillLearn-ul>li {
+.list>li {
   margin: 0px 15px;
   font-size: .9rem;
 }

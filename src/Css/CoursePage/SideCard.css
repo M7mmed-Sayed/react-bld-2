@@ -12,14 +12,12 @@
 }
 
 .img-mastercover {
-    background-image: url(https://img-c.udemycdn.com/course/240x135/394676_ce3d_5.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     height: 200px;
     position: relative;
     cursor: pointer;
 }
-
 .play-button {
     position: absolute;
     top: 50%;

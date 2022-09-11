@@ -3,18 +3,13 @@ import { Link } from 'react-router-dom'
 import '../../Css/CoursePage/CourseHeaderMobileMode.css'
 import * as Icon from 'react-bootstrap-icons'
 import { Button } from 'react-bootstrap'
+import Stars from '../Common/Stars'
 
-const StarRating = () => {
-    return [...Array(5)].map((star, index) => {
-        index++
-        return (
-            <li key={index}>
-                <i className="fa-solid fa-star star-icon"></i>
-            </li>
-        )
+function CourseHeaderMobileMode({ title, describe, instractors, Imageurl }) {
+    let CourseInsetractorsName = ''
+    instractors.forEach((element) => {
+        CourseInsetractorsName += element.name
     })
-}
-function CourseHeaderMobileMode() {
     return (
         <div className="header-mb-container">
             <div className="hd-mobile-mode">
@@ -27,6 +22,11 @@ function CourseHeaderMobileMode() {
                 </div>
                 <div className="img-mastercover-mb">
                     <img
+                        className="img-mastercover w-100 h-100"
+                        src={Imageurl}
+                        alt="course"
+                    />{' '}
+                    <img
                         src="https://archive.org/download/mx-player-icon/mx-player-icon.png"
                         width="54px"
                         alt="Play button"
@@ -35,24 +35,13 @@ function CourseHeaderMobileMode() {
                 </div>
                 <div className="info-mb">
                     <div>
-                        <h1>
-                            {
-                                'Learn Python: The Complete Python Programming Course'
-                            }
-                        </h1>
+                        <h1>{title}</h1>
                     </div>
                     <div>
-                        <h6>
-                            Learn A-Z everything about Python, from the basics,
-                            to advanced topics like Python GUI, Python Data
-                            Analysis, and more!
-                        </h6>
+                        <h6>{describe}</h6>
                     </div>
                     <div className="rate-container">
-                        <h3 className="rating-value  rating-item ">{4.4}</h3>
-                        <ul className="stars-list  rating-item">
-                            {StarRating()}
-                        </ul>
+                        <Stars rating={4.4} />
                         <Link to={'/'}>
                             <h6 className="rating-pepole  rating-item">
                                 (1252 rating)
@@ -63,8 +52,8 @@ function CourseHeaderMobileMode() {
                         </h6>
                     </div>
                     <div className="author">
-                        {'Created by '}{' '}
-                        <Link to={'/'}>{'avinsh jani , the Codex'}</Link>
+                        {'Created by '}
+                        <Link to={'/'}>{CourseInsetractorsName}</Link>
                     </div>
                     <div className="extra-data-mb">
                         <div className="course-date">

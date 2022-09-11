@@ -1,27 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import '../../Css//CoursePage/CourseHeader.css'
+import Stars from '../Common/Stars'
 import CourseHeaderMobileMode from './CourseHeaderMobileMode'
 import SideCard from './SideCard'
-const StarRating = () => {
-    return [...Array(5)].map((star, index) => {
-        index++
-        return (
-            <li key={index}>
-                <i className="fa-solid fa-star star-icon"></i>
-            </li>
-        )
-    })
-}
-function CourseHeader(props) {
-    const [course, setCourse] = useState([])
-    const [isLoading, setisLoading] = useState(true)
-    useEffect(() => {
-        if (props.data != null) {
-            setisLoading(false)
-            setCourse(props.data)
-        }
-    }, [props.data])
+
+function CourseHeader({ title, describe, instractors ,imgurl }) {
+    let CourseInsetractorsName='';
+    instractors.forEach((element) => {CourseInsetractorsName+=element.name})
     return (
         <div className="Header">
             <div className="header-content">
@@ -33,22 +19,13 @@ function CourseHeader(props) {
                     <Link to={'/'}>Python</Link>
                 </div>
                 <div>
-                    <h2>
-                        {' Learn A-Z everything about Python, from the basics'}
-                    </h2>
+                    <h1>{title}</h1>
                 </div>
                 <div>
-                    <h6>
-                        Learn A-Z everything about Python, from the basics, to
-                        advanced topics like Python GUI, Python Data Analysis,
-                        and more!
-                    </h6>
+                    <h6>{describe}</h6>
                 </div>
                 <div className="rate-container">
-                    <h3 className="rating-value  rating-item ">
-                        {course.rating}
-                    </h3>
-                    <ul className="stars-list  rating-item">{StarRating()}</ul>
+                    <Stars rating={4.4} />
                     <Link to={'/'}>
                         <h6 className="rating-pepole  rating-item">
                             (1252 rating)
@@ -57,7 +34,8 @@ function CourseHeader(props) {
                     <h6 className="students  rating-item">19,478 students</h6>
                 </div>
                 <div className="author">
-                    {'Created by '} <Link to={'/'}>{course.author}</Link>
+                    {'Created by '}{' '}
+                    <Link to={'/'}>{CourseInsetractorsName}</Link>
                 </div>
                 <div className="extra-data">
                     <div className="course-date">
@@ -74,7 +52,12 @@ function CourseHeader(props) {
                     </div>
                 </div>
             </div>
-            <CourseHeaderMobileMode />
+            <CourseHeaderMobileMode
+                title={title}
+                describe={describe}
+                instractors={instractors}
+                Imageurl={imgurl}
+            />
         </div>
     )
 }

@@ -15,6 +15,10 @@
 .image-container {
     border: 1px solid black;
 }
+.card-container >a {
+    color: black;
+    text-decoration:none
+}
 .card-content {
     margin-top: 0.5rem;
 }
@@ -37,7 +41,7 @@
     margin-right: 3px;
 }
 .pepole {
-    margin: 5px;
+    margin-top: 15px;
 }
 h3,
 h6,h4 {

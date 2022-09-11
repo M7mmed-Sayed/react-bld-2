@@ -4,7 +4,7 @@ import FieldContainer from '../components/homePage/FieldContainer'
 import '../Css/HomePage/HomePage.css'
 import ControllTabs from '../components/homePage/ControllTabs'
 import useFetch from '../Hooks/useFetch'
-import NavScrollExample from '../components/NavBar/NavScrollExample'
+import NavBar from '../components/NavBar/NavBar'
 import { useMemo } from 'react'
 import { useState } from 'react'
 import Loader from '../components/Common/Loader'
@@ -14,13 +14,14 @@ const CourseData =
     'https://my-json-server.typicode.com/M7mmed-Sayed/myjsondata/python-courses'
 function HomePage(props) {
     let [searchParams, setSearchParams] = useSearchParams()
-    let [query, setQuery] = useState(searchParams.get('query'))
+    let [query, setQuery] = useState('')
     const [filteredResults, setFilteredResults] = useState([])
     const { data, isLoading, hasError } = useFetch(CourseData)
+    
     // use call back
     useEffect(() => {
         setQuery(searchParams.get('query'))
-        SearchItems(query)
+        if (query!==null) SearchItems(query)
     }, [searchParams, isLoading,query])
     const SearchItems = (searchValue) => {
         console.log('lol ' + searchValue)
@@ -39,17 +40,16 @@ function HomePage(props) {
     }
     return (
         <>
-            <NavScrollExample searchparam={setSearchParams} />
+            <NavBar searchparam={setSearchParams} />
             {isLoading ? (
                 <Loader />
             ) : (
                 <div className="home-body">
                     <Banner />
-                    <ControllTabs />
                     <FieldContainer
                         isLoading={isLoading}
                         hasError={hasError}
-                        data={query.length === 0 ? data : filteredResults}
+                        data={query === null ? data : filteredResults}
                     ></FieldContainer>
                 </div>
             )}

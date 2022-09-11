@@ -41,12 +41,8 @@ const Accordion = ({
                 // className="udi udi-play-circle"
               >
                 <div>
-                  {item.icon_class === "udi udi-play-circle" ? (
                     <Icon.PlayCircleFill />
-                  ) : (
-                    <Icon.FileEarmark />
-                  )}{" "}
-                  {item.title}
+                  {' '+item.title}
                 </div>
                 <div> {item.content_summary}</div>
               </li>

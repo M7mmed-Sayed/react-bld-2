@@ -3,19 +3,24 @@ import '../../Css//CoursePage/SideCard.css'
 import * as Icon from 'react-bootstrap-icons'
 import { Link } from 'react-router-dom'
 
-function SideCard() {
+function SideCard({Imageurl}) {
     return (
         <>
             <div className="stickly-card">
                 <div className="cover">
-                        <div className="img-mastercover">
-                            <img
-                                src="https://archive.org/download/mx-player-icon/mx-player-icon.png"
-                                width="54px"
-                                alt="Play button"
-                                className="play-button"
-                            />
-                        </div>
+                    <div className="img-mastercover">
+                        <img
+                            className="img-mastercover"
+                            src={Imageurl}
+                            alt="course"
+                        />
+                        <img
+                            src="https://archive.org/download/mx-player-icon/mx-player-icon.png"
+                            width="54px"
+                            alt="Play button"
+                            className="play-button"
+                        />
+                    </div>
                     <div className="card-text-area ">
                         <div className="card-side-price">
                             <div className="d-flex flex-row">

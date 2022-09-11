@@ -1,8 +1,6 @@
 import React from 'react'
 import { useRoutes } from 'react-router-dom'
 import NotFoundPage from '../components/Common/NotFoundPage'
-import Footer from '../components/Footer'
-import NavScrollExample from '../components/NavBar/NavScrollExample'
 import CoursePage from '../pages/CoursePage'
 import HomePage from '../pages/HomePage'
 function RoutesPage() {
