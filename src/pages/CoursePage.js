@@ -11,20 +11,23 @@ import '../Css/CoursePage/CoursePage.css'
 import SideCard from '../components/CoursePage/SideCard'
 import Footer from '../components/Footer'
 import HomePage from './HomePage'
-import { useSearchParams } from 'react-router-dom'
+import { useParams, useSearchParams } from 'react-router-dom'
 import useFetch from '../Hooks/useFetch'
 import Loader from '../components/Common/Loader'
 import { useEffect } from 'react'
 import NavBar from '../components/NavBar/NavBar'
 
-fetch(`http://localhost:3009/courses/1`)
-    .then(async (response) => response.json())
-    .then(async (course) => {})
+let url = 'https://my-json-server.typicode.com/M7mmed-Sayed/db-courses/courses/1'
 function CoursePage(props) {
+    const { id } = useParams()
+    if (parseInt(id) % 2 === 0) {
+        url =
+            'https://my-json-server.typicode.com/M7mmed-Sayed/db-courses/courses/2'
+    }
+
     let [searchParams, setSearchParams] = useSearchParams()
-           const { data, isLoading, hasError } = useFetch(
-        `http://localhost:3009/courses/1`
-    )
+    const { data, isLoading, hasError } = useFetch(url)
+    console.log(id)
     let {
         data: courseObject,
         title,
@@ -34,22 +37,21 @@ function CoursePage(props) {
         reviews,
     } = data
     useEffect(() => {
-            let {
-                data: c,
-                title: t,
-                describe: d,
-                Imageurl: Img,
-                instractors: i,
-                reviews:r,
-            } = data
-            courseObject = c
-            title = t
-            describe = d
-            Imageurl = Img
-            instractors = i
-            reviews=r
-        
-    }, [isLoading,data])
+        let {
+            data: c,
+            title: t,
+            describe: d,
+            Imageurl: Img,
+            instractors: i,
+            reviews: r,
+        } = data
+        courseObject = c
+        title = t
+        describe = d
+        Imageurl = Img
+        instractors = i
+        reviews = r
+    }, [isLoading, data])
     return (
         <>
             <NavBar searchparam={setSearchParams} />
