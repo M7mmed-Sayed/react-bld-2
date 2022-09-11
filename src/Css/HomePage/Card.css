@@ -1,12 +1,12 @@
 .card-container {
     width: 300px;
-    overflow: hidden;
     display: inline;
     height: 500px;
-    margin: 5px;
+    margin: 15px;
 }
-.image-container img {
+.image-container > img {
     overflow: hidden;
+    width: 270;
     max-width: 100%;
     max-height: 100%;
     display: block;
@@ -14,17 +14,20 @@
 }
 .image-container {
     border: 1px solid black;
+    overflow: hidden;
 }
-.card-container >a {
+.card-container > a {
     color: black;
-    text-decoration:none
+    text-decoration: none;
 }
 .card-content {
     margin-top: 0.5rem;
 }
-.stars-list {
+.list {
     list-style: none;
     display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
     margin-left: 0;
     padding-left: 0;
     padding-top: 0;
@@ -44,7 +47,8 @@
     margin-top: 15px;
 }
 h3,
-h6,h4 {
+h6,
+h4 {
     margin: 0;
     padding: 0;
     text-align: left;
@@ -52,4 +56,58 @@ h6,h4 {
 }
 .card-title {
     margin-bottom: 0.5rem;
+}
+.info-back {
+    opacity: 0;
+    background-color: white;
+    pointer-events: none;
+    transform: scale(1.5);
+    width: 300px;
+    box-shadow: 2px 2px 2px 2px blue;
+    padding: 8px;
+    height: max-content;
+    display: block;
+    z-index: 10;
+    transition: all 0.4s ease-in-out 0.2s;
+}
+.date-hover{
+    color: green;
+}
+.card-container:hover .info-back {
+    transform: scale(1);
+    opacity: 1;
+    transform: translate(0px, -500px);
+    overflow: visible;
+    z-index: 10;
+    pointer-events: auto;
+}
+.hover > .btn-danger {
+    width: 170px;
+    font-size: medium;
+    color: white;
+    margin: 0px 15px 15px 40px;
+    height: 40px;
+        border-radius: 10%  ;
+
+}
+.btn-circle.btn-sm {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    color: black;
+    border:2 solid black;
+    padding: 0px 0px;
+    border-radius: 100%  ;
+    font-size: 25px;
+    text-align: center;
+}
+@media all and (min-width: 400px) {
+    .card-container:hover .info-back {
+        transform: scale(1);
+        opacity: 1;
+        transform: translate(250px, -500px);
+        overflow: visible;
+        z-index: 10;
+        pointer-events: auto;
+    }
 }

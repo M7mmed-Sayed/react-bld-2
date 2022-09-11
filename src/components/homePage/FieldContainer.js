@@ -18,7 +18,7 @@ function FieldContainer(props) {
             */
         let courses = data
         let view = courses.map((course) => {
-            return <Card data={course} key={course.id}></Card>
+            return <Card course={course} key={course.id}></Card>
         })
         return view
     }
